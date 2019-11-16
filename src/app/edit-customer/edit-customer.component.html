@@ -1,0 +1,19 @@
+<div>
+    <h2 *ngIf="!customerInfo || customerInfo.id === undefined">Add record</h2>
+    <h2 *ngIf="customerInfo && customerInfo.id !== undefined">Update record (ID: )</h2>    <form>
+        <div class="form-group">
+            <label for="firstName-input">Firstname:</label>
+            <input type="text" id="firstName-input" [(ngModel)]="customerInfo.firstName" class="form-control" name="firstName"/>
+        </div>
+        <div class="form-group">
+            <label for="lastName-input">Lastname</label>
+            <input type="text" id="lastName-input" [(ngModel)]="customerInfo.lastName" class="form-control" name="lastName"/>
+        </div>
+        <div class="form-group">
+            <label for="eMail-input">E-Mail Address</label>
+            <input type="email" id="eMail-input" [(ngModel)]="customerInfo.eMail" class="form-control" name="eMail"/>
+        </div>
+        <button type="button" class="btn btn-primary" (click)="editCustomerRecord($event);">Save</button>
+
+    </form>
+   </div>

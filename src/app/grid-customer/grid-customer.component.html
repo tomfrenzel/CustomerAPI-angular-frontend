@@ -1,0 +1,22 @@
+<a href="#" id="new-button">New</a>
+<table>
+<thead>
+    <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>E-Mail Address</th>
+        <th>Commands</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let customerInfo of customerData"> 
+        <td>{{ customerInfo.firstName }}</td>
+        <td>{{ customerInfo.lastName }}</td>
+        <td>{{ customerInfo.eMail }}</td>
+        <td>
+            <a href="#" (click)="editRecord(customerInfo)" class="link">Edit</a>
+            <a href="#" (click)="deleteRecord(customerInfo)" class="link">Delete</a>
+        </td>
+    </tr>
+</tbody>
+</table>
