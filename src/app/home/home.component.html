@@ -2,10 +2,13 @@
     <div class="col-md-4">
         <app-edit-customer (customerCreated)="createOrUpdateCustomer($event)" [customerInfo]="currentCustomer"></app-edit-customer>
     </div>
+    <div class="col-md-4">
+        <app-edit-item (itemCreated)="createOrUpdateItem($event)" [itemInfo]="currentItem"></app-edit-item>
+    </div>
     <div class="col-md-8">
         <app-grid-customer [customerData]="customerData" (editClicked)="editClicked($event)" (newClicked)="newClicked()" (recordDeleted)="deleteClicked($event)"></app-grid-customer>
     </div>
     <div class="col-md-8">
-        <app-grid-item [itemData]="itemData" (editClicked)="editClicked($event)" (newClicked)="newClicked()" (recordDeleted)="deleteClicked($event)"></app-grid-item>
+        <app-grid-item [itemData]="itemData" (editItemClicked)="editItemClicked($event)" (newItemClicked)="newItemClicked()" (recordItemDeleted)="deleteItemClicked($event)"></app-grid-item>
     </div>
   </div>
