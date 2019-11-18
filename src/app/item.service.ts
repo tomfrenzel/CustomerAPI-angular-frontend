@@ -7,7 +7,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class ItemService {
   private headers: HttpHeaders;
-  private accessPointUrl: string = 'https://localhost:44334/api/Items';
+  private accessPointUrl: string = 'https://tmfr-customer-api.azurewebsites.net/api/Items';
 
   constructor(private http: HttpClient) {
     this.headers = new HttpHeaders({'Content-Type': 'application/json; charset=utf-8'});
