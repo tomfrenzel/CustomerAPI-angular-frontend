@@ -7,27 +7,27 @@ import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
 })
 export class GridItemComponent implements OnInit {
 
-  @Output() recordDeleted = new EventEmitter<any>();
-  @Output() newClicked = new EventEmitter<any>();
-  @Output() editClicked = new EventEmitter<any>();
+  @Output() recordItemDeleted = new EventEmitter<any>();
+  @Output() newItemClicked = new EventEmitter<any>();
+  @Output() editItemClicked = new EventEmitter<any>();
   @Input() itemData: Array<any>;
 
   constructor() { }
 
   ngOnInit() {
   }
-public deleteRecord(record) {
-    this.recordDeleted.emit(record);
+public deleteItemRecord(record) {
+    this.recordItemDeleted.emit(record);
   }
     
-  public editRecord(record) {
+  public editItemRecord(record) {
     const clonedRecord = Object.assign({}, record);
-    this.editClicked.emit(clonedRecord);
+    this.editItemClicked.emit(clonedRecord);
 
   }
 
-  public newRecord() {
-    this.newClicked.emit();
+  public newItemRecord() {
+    this.newItemClicked.emit();
   }
 }
 

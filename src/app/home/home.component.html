@@ -1,11 +1,15 @@
+<link href="home.component.css">
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4" style="margin: 15px;">
         <app-edit-customer (customerCreated)="createOrUpdateCustomer($event)" [customerInfo]="currentCustomer"></app-edit-customer>
     </div>
-    <div class="col-md-8">
-        <app-grid-customer [customerData]="customerData" (editClicked)="editClicked($event)" (newClicked)="newClicked()" (recordDeleted)="deleteClicked($event)"></app-grid-customer>
+    <div class="col-md-4" style="margin: 15px;">
+        <app-edit-item (itemCreated)="createOrUpdateItem($event)" [itemInfo]="currentItem"></app-edit-item>
     </div>
-    <div class="col-md-8">
-        <app-grid-item [itemData]="itemData" (editClicked)="editClicked($event)" (newClicked)="newClicked()" (recordDeleted)="deleteClicked($event)"></app-grid-item>
+    <div class="col-md-8" style="margin: 15px; max-width: min-content;">
+            <app-grid-item [itemData]="itemData" (editItemClicked)="editItemClicked($event)" (newItemClicked)="newItemClicked()" (recordItemDeleted)="deleteItemClicked($event)"></app-grid-item>
+        </div>
+    <div class="col-md-8" style="margin: 15px; max-width: fit-content;">
+        <app-grid-customer [customerData]="customerData" (editClicked)="editClicked($event)" (newClicked)="newClicked()" (recordDeleted)="deleteClicked($event)"></app-grid-customer>
     </div>
   </div>

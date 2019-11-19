@@ -71,7 +71,7 @@ public createOrUpdateCustomer = function(customer: any) {
     return {
       id: undefined,
       name: '',
-      price: '',
+      price: 0
     }
   }
 

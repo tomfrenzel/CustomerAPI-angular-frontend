@@ -1,6 +1,6 @@
 <div>
-    <h2 *ngIf="!customerInfo || customerInfo.id === undefined">Add record</h2>
-    <h2 *ngIf="customerInfo && customerInfo.id !== undefined">Update record (ID: )</h2>    <form>
+    <h2 *ngIf="!customerInfo || customerInfo.id === undefined">Add or Edit customer</h2>
+    <h2 *ngIf="customerInfo && customerInfo.id !== undefined">Update customer (ID: )</h2>    <form>
         <div class="form-group">
             <label for="firstName-input">Firstname:</label>
             <input type="text" id="firstName-input" [(ngModel)]="customerInfo.firstName" class="form-control" name="firstName"/>
