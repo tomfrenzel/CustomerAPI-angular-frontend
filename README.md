@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/tmfr/CustomerAPI/_apis/build/status/CustomerAPI-frontend-CI?branchName=master)](https://dev.azure.com/tmfr/CustomerAPI/_build/latest?definitionId=29&branchName=master)
+
 # CustomerAPI
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.14.
